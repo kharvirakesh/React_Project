@@ -3,7 +3,7 @@ import '../BurgerIngreedient/BurgerIngreedient.css'
 
 const BurgerIngreedient = (props) => {
 
-    let burgerIngreedient = null;
+    let ingredient = null;
 
     switch (props.type) {
         case ('bread-bottom'):
