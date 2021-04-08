@@ -10,7 +10,7 @@ function Burger(props) {
         })
         } 
     )
-    .reduce((acc,el)=>{
+    .reduce((acc,el)=> {
        return acc.concat(el)
     //    return (acc + el)
     },[])
