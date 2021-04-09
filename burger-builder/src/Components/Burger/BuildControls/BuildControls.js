@@ -1,7 +1,7 @@
 import React from 'react'
 // import './BuildControl/buildControls.css'
 // import buildControl from './BuildControl/buildControl'
-import buildControl from './BuildControl/buildControl'
+import BuildControl from './BuildControl/BuildControl'
 
 const controls = [
     {label:'Salad' , type: 'salad'},
@@ -9,6 +9,7 @@ const controls = [
     {label:'Cheese' , type: 'cheese'},
     {label:'Meat' , type: 'meat'}
 ]
+
 const BuildControls = (props) => {
     return (
         <div style={{
@@ -21,11 +22,8 @@ const BuildControls = (props) => {
                 margin: 'auto',
                 padding: '10px 0'
         }}>
-        {controls.map((ctrl)=>{
-            <buildControl></buildControl>
-         //    <buildControl key={ctrl.label} label={ctrl.label}/>
-           console.log(ctrl.label)
-        })}
+          
+            { controls.map( ctrl => <BuildControl key={ctrl.label} label={ctrl.label}/> )}        
         </div>
     )
 }
@@ -33,13 +31,3 @@ const BuildControls = (props) => {
 export default BuildControls
 
 
-// .BuildControls {
-//     width: 100%;
-//     background-color: #CF8F2E;
-//     display: flex;
-//     flex-flow:column ;
-//     align-items: center;
-//     box-shadow: 0 2px 1px #ccc;
-//     margin: auto;
-//     padding: 10px 0;
-// }

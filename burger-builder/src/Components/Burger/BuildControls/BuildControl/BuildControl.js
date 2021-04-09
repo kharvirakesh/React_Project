@@ -1,16 +1,15 @@
 import React from 'react'
-import './buildControl.css'
+import './BuildControl.css'
 
-const buildControl = (props) => {
+const BuildControl = (props) => {
     return (
         <div className='BuildControl'>
           <div className='Label'>{props.label}</div>
-           {console.log('testing.....')}
-           {console.log(props.label)}
+           {console.log("this is props message"+props.label)}
           <button className='Less'>Less</button>
           <button className='More'>More</button>
         </div>
     )
 }
 
-export default buildControl
+export default BuildControl
