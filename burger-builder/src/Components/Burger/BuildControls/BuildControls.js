@@ -11,6 +11,7 @@ const controls = [
 ]
 
 const BuildControls = (props) => {
+    // console.log('added and removed' + Object.keys(props))
     return (
         <div style={{
                 width: '100%',
@@ -23,7 +24,13 @@ const BuildControls = (props) => {
                 padding: '10px 0'
         }}>
           
-            { controls.map( ctrl => <BuildControl key={ctrl.label} label={ctrl.label}/> )}        
+            { controls.map(ctrl => 
+            <BuildControl 
+              key={ctrl.label} 
+              label={ctrl.label}
+              added={()=>props.ingredientAdded(ctrl.type)}
+              removed={()=>props.ingredientRemoved(ctrl.type)}/> 
+              )}        
         </div>
     )
 }
