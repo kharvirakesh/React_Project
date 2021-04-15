@@ -3,6 +3,7 @@ import '../../assets/css/Burger.css'
 import BurgerIngreedient from './BurgerIngreedient/BurgerIngreedient'
 
 function Burger(props) {
+    console.log(Object.keys(props))
     let transformedIngredients = Object.keys(props.ingredients)
     .map((igkey) => {
          return [...Array(props.ingredients[igkey])].map((_, i)=>{
@@ -23,7 +24,8 @@ function Burger(props) {
     return (
         <div className='Burger'>
             <BurgerIngreedient type="bread-top" />
-               {transformedIngredients }
+               { transformedIngredients }
+               { props.Emptymsg } 
             <BurgerIngreedient type="bread-bottom" />
         </div>
     ) 
